@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap");
 
+
 * {
   margin: 0;
   padding: 0;
@@ -21,11 +22,24 @@ body {
 
 .menu {
   cursor: pointer;
+  @media all and (min-width: 1280px) {
+    display: none;
+  } 
+  
 }
 
 .s_menu {
   display: none;
   cursor: pointer;
+}
+
+#menu_list{
+  @media all and (min-width: 1280px) {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 180px;
+    color: hsl(0, 0%, 100%);
+      } 
 }
 
 .logo {
@@ -34,10 +48,26 @@ body {
   left: 150px;
   margin-top: 45px;
   z-index: 1;
+  @media all and (min-width: 1280px) {
+    left: 58px;
+    top: 4px;
+  } 
 }
 
 li {
   cursor: pointer;
+  @media all and (min-width: 1280px) {
+    font-size: 1.1rem;
+    &:hover{
+      border-bottom: 2px solid;
+      transition: all 2s ease-in-out;
+
+    }
+      } 
+}
+li:active {
+    color:hsl(0, 0%, 63%);
+
 }
 
 ul {
@@ -50,6 +80,7 @@ ul {
   gap: 32px;
   width: 100%;
   font-weight: 600;
+
 }
 
 .nav_bg {
@@ -73,7 +104,10 @@ ul {
   opacity: 0.2;
   height: 0;
   z-index: 0;
-  @media all and (min-width: 1200px) {
+  @media all and (min-width: 1280px) {
+    display: flex;
+  } 
+  @media all and (min-width: 1400px) {
     display: flex;
   } 
 }
@@ -87,7 +121,7 @@ ul {
 
 .slide_info{
     @media all and (min-width: 400px) {
-        padding: 60px 70px;
+        padding: 120px 70px 60px;
       }
 }
 
@@ -136,8 +170,11 @@ ul {
   background: black;
   padding: 10px;
   cursor: pointer;
-  @media all and (min-width: 800px) {
-    padding: 20px;
+  @media all and (min-width: 1200px) {
+    padding: 28px;
+  }
+  @media all and (min-width: 1440px) {
+    padding: 34.2px;
   }
 }
 
@@ -150,16 +187,51 @@ ul {
 .arrows {
   position: absolute;
   right: 0;
-  top: 38.9%;
+  top: 316px;
   z-index: 1;
-  @media all and (min-width: 800px) {
-    right: 332px;
-    top: 470px;
-  }
+
   
+  @media all and (min-width: 1200px) {
+    right: 420px;
+    top: 454px;
+  } 
+  @media all and (min-width: 1416px) {
+    right: 420px;
+    top: 442px;
+  }  
+  @media all and (min-width: 1500px) {
+    right: 520px;
+    top: 454px;
+  }
+}
+
+.slide_container{
+    position: relative;
 }
 
 // about sec
+
+.about_sec {
+    @media all and (max-width: 1280px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    @media all and (min-width: 1201px) {
+    display: flex;
+  }
+}
+
+.as_info {
+  @media all and (min-width: 1200px) {
+    padding: 0 50px;
+  }
+  
+  @media all and (min-width: 376px) {
+    padding: 60px 70px;
+  }
+
+}
 
 .h3_text {
   padding: 52px 24px 14px;
@@ -167,39 +239,34 @@ ul {
   letter-spacing: 5px;
   font-weight: 600;
   text-transform: uppercase;
+  @media all and (min-width: 376px) {
+    padding: 0px 0px 14px;
+  }
 }
 
 .p_text_sec {
   padding: 14px 24px 46px;
   font-size: 1.03rem;
+  @media all and (min-width: 376px) {
+    padding: 0px 0px 14px;
+  }
 }
 
 .light_img,
 .dark_img {
     width: 375px;
 
-    @media all and (min-width: 375px) {
+    @media all and (min-width: 420px) {
         width: 420px;
     }
-    
 }
+
+
+
 
 // ftr
 .attribution {
   text-align: center;
 }
 
-.about_sec {
-  @media all and (min-width: 800px) {
-    display: flex;
-  }
-}
 
-.about_sec img{
-text-align: center;
-}
-.as_info {
-  @media all and (min-width: 1200px) {
-    padding: 0 50px;
-  }
-}

@@ -3,7 +3,8 @@ import sliderInfo from "../exports/sliderInfo";
 import images from "../exports/images";
 
 const Slider = ({ slides }) => {
-  const [current, setCurrent] = useState(0);
+
+  const [ current, setCurrent ] = useState(0);
   const length = slides.length;
 
   const nextSlide = () => {
@@ -20,9 +21,29 @@ const Slider = ({ slides }) => {
     return null;
   }
 
+  function MyComponent() {
 
+    const [dimensions, setDimensions] = React.useState({ 
+        width: window.innerWidth
+      })
+  
+    React.useEffect(() => {
+        function handleResize() {
+        setDimensions({
+          width: window.innerWidth
+        })
+    }
+      window.addEventListener('resize', handleResize)
+      
+      return _ => {
+        window.removeEventListener('resize', handleResize)
+      }
+      
+  })
+    }
+  MyComponent()
   return (
-    <>
+    <div className="slide_container">
       <section className="arrows">
         <img 
         src={images.icons.angLeft} 
@@ -40,7 +61,8 @@ const Slider = ({ slides }) => {
       {sliderInfo.map((e, index) => {
         return (
             <div className={index === current ? 'slide slide_active' : 'slide'} key={index}>
-          <img src={window.innerWidth <= 400 ? e.img : e.dstp_img} alt="furniture" className='furn'/>
+         
+            <img src={window.innerWidth <= 400 ? e.img : e.dstp_img} alt="furniture" id='furn'/>
          <div className="slide_info">
          <h2 className="h2_text">{e.title}</h2>
           <p className="p_text">{e.info}</p>
@@ -51,7 +73,7 @@ const Slider = ({ slides }) => {
         </div>
         )
       })}
-    </>
+    </div>
   );
 };
 

@@ -30,7 +30,7 @@ const Nav = () => {
         <Navbar id='nb'>
         <img src={images.icons.ham} alt="menu" className="menu" id="ham" onClick={ showMenu }/>
         <img src={images.icons.close} alt="X" className="s_menu" id="close" onClick={ showMenu }/>
-        <ul id="menu_list" className="s_menu">
+        <ul id="menu_list" className="s_menu ">
           <li>home</li>
           <li>shop</li>
           <li>about</li>
