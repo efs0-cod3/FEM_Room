@@ -1,6 +1,7 @@
 {
   "name": "room",
   "version": "0.1.0",
+  "homepage": "https://efs0-cod3.github.io/FEM_Room",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -37,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "sass": "^1.54.0"
   }
 }
