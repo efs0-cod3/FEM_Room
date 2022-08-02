@@ -21,8 +21,8 @@ const Slider = ({ slides }) => {
     return null;
   }
 
+// myComponent re-renders the page!
   function MyComponent() {
-
     const [dimensions, setDimensions] = React.useState({ 
         width: window.innerWidth
       })
@@ -42,6 +42,7 @@ const Slider = ({ slides }) => {
   })
     }
   MyComponent()
+
   return (
     <div className="slide_container">
       <section className="arrows">
@@ -62,7 +63,7 @@ const Slider = ({ slides }) => {
         return (
             <div className={index === current ? 'slide slide_active' : 'slide'} key={index}>
          
-            <img src={window.innerWidth <= 400 ? e.img : e.dstp_img} alt="furniture" id='furn'/>
+            <img src={window.innerWidth <= 420 ? e.img : e.dstp_img} alt="furniture" id='furn'/>
          <div className="slide_info">
          <h2 className="h2_text">{e.title}</h2>
           <p className="p_text">{e.info}</p>
